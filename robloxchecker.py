@@ -3,18 +3,19 @@ import time
 from datetime import datetime
 from termcolor import colored
 
-# ===== KIRA LOGO =====
-KIRA_LOGO = r"""
-██╗░░██╗██╗██████╗░░█████╗░
-██║░██╔╝██║██╔══██╗██╔══██╗
-█████═╝░██║██████╔╝███████║
-██╔═██╗░██║██╔══██╗██╔══██║
-██║░╚██╗██║██║░░██║██║░░██║
-╚═╝░░╚═╝╚═╝╚═╝░░╚═╝╚═╝░░╚═╝
+# ===== IZURI LOGO =====
+IZURI_LOGO = r"""
+██╗███████╗██╗░░██╗██████╗░██╗
+██║╚══███╔╝██║░░██║██╔══██╗██║
+██║░░███╔╝░██║░░██║██████╔╝██║
+██║░███╔╝░░██║░░██║██╔══██╗██║
+██║███████╗╚██████╔╝██║░░██║██║
+╚═╝╚══════╝░╚═════╝░╚═╝░░╚═╝╚═╝
+
 """
 
-print(colored(KIRA_LOGO, "cyan", attrs=["bold"]))
-print(colored("            Kira Roblox Checker\n", "yellow", attrs=["bold"]))
+print(colored(IZURI_LOGO, "cyan", attrs=["bold"]))
+print(colored("            Izuri Roblox Checker\n", "yellow", attrs=["bold"]))
 
 
 # ===== DATE FORMATTER =====
@@ -101,11 +102,11 @@ try:
         username, password = line.split(":", 1)
         accounts.append((username.strip(), password.strip()))
 
-    output_file = "kira_roblox_results.txt"
+    output_file = "izuri_roblox_results.txt"
 
     with open(output_file, "w") as f:
-        f.write(KIRA_LOGO + "\n")
-        f.write("            Created by KIRA\n\n")
+        f.write(IZURI_LOGO + "\n")
+        f.write("            Created by IZURI\n\n")
 
         for i, (username, password) in enumerate(accounts, 1):
             print(colored(f"🔍 Checking {i}/{len(accounts)}: {username}", "yellow"))
@@ -115,7 +116,7 @@ try:
             if not info:
                 continue
 
-            f.write("⪻━━━━━═『𝐊𝐈𝐑A』═━━━━━⪼\n\n")
+            f.write("⪻━━━━━═『IZURI』═━━━━━⪼\n\n")
 
             for k, v in info.items():
                 line = f"[+] {k}: {v}"
